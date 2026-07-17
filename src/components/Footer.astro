@@ -1,0 +1,93 @@
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <img class="footer-logo" src="/images/jaguirre-logo.png" alt="J Aguirre Management OPC" />
+      <p class="footer-copy">
+        A trusted extension of your team for customer operations, content, marketing,
+        and moderation.
+      </p>
+    </div>
+
+    <div>
+      <h2>Explore</h2>
+      <a href="/">Home</a>
+      <a href="/services">Services</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+    </div>
+
+    <div>
+      <h2>Contact</h2>
+      <a href="mailto:hello@jaguirre.co">hello@jaguirre.co</a>
+      <span>Philippines</span>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <span>© {new Date().getFullYear()} J AGUIRRE MANAGEMENT OPC.</span>
+    <span>Built for clarity, trust, and sustainable growth.</span>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    padding: 4rem 0 2rem;
+    border-top: 1px solid var(--border);
+    background: var(--white);
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .footer-logo {
+    width: 12rem;
+  }
+
+  .footer-copy {
+    max-width: 30rem;
+    margin-top: 1rem;
+    color: var(--muted);
+  }
+
+  h2 {
+    margin-bottom: 1rem;
+    font-size: 0.82rem;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+  }
+
+  .footer-grid a,
+  .footer-grid span {
+    display: block;
+    margin-top: 0.55rem;
+    color: var(--muted);
+  }
+
+  .footer-grid a:hover {
+    color: var(--forest-900);
+  }
+
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 3rem;
+    padding-top: 1.4rem;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+
+  @media (max-width: 760px) {
+    .footer-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .footer-bottom {
+      flex-direction: column;
+    }
+  }
+</style>

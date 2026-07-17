@@ -1,17 +1,257 @@
 ---
+import BaseLayout from "../layouts/BaseLayout.astro";
 
+const services = [
+  {
+    title: "Customer Support",
+    text: "Responsive, human-centered support that protects customer trust and keeps issues moving.",
+  },
+  {
+    title: "Content & Marketing",
+    text: "Consistent content and campaign support that keeps your brand visible without consuming your day.",
+  },
+  {
+    title: "Content Moderation",
+    text: "Reliable moderation workflows that help maintain safer, healthier online communities.",
+  },
+];
 ---
+<BaseLayout
+  title="J Aguirre Management OPC | Your Trusted Operations Partner"
+  description="J Aguirre Management helps growing businesses handle customer support, content, marketing, and moderation as a trusted extension of their team."
+>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">Your trusted operations partner</span>
+        <h1>Scale your business without scaling the chaos.</h1>
+        <p class="lead">
+          We become the extra hand your growing business needs—supporting customers,
+          strengthening your brand, and keeping essential work moving while you focus
+          on what matters most.
+        </p>
+        <div class="button-row">
+          <a class="button button-primary" href="/contact">Book a consultation</a>
+          <a class="button button-secondary" href="/services">Explore our services</a>
+        </div>
+      </div>
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>J AGUIRRE MANAGEMENT OPC</title>
-	</head>
-	<body>
-		<h1>J AGUIRRE MANAGEMENT OPC</h1>
-	</body>
-</html>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="visual-card">
+          <img src="/images/jaguirre-mark.png" alt="" />
+          <span>More clarity</span>
+          <strong>Less operational pressure</strong>
+        </div>
+        <div class="metric metric-one">
+          <span>01</span>
+          <p>Trusted support</p>
+        </div>
+        <div class="metric metric-two">
+          <span>02</span>
+          <p>Consistent execution</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <span class="eyebrow">What we help you manage</span>
+      <div class="section-heading">
+        <h2>Reliable support for the work growth creates.</h2>
+        <p class="lead">
+          You already have traction. We help you protect it by taking ownership of
+          important work that can no longer depend on you alone.
+        </p>
+      </div>
+
+      <div class="grid-3 service-grid">
+        {services.map((service, index) => (
+          <article class="card service-card">
+            <span class="service-number">0{index + 1}</span>
+            <h3>{service.title}</h3>
+            <p>{service.text}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container split">
+      <div>
+        <span class="eyebrow">Built around partnership</span>
+        <h2>We do not want to feel like another vendor.</h2>
+        <p class="lead partnership-copy">
+          We learn how your company works, communicate clearly, and take responsibility
+          for the work entrusted to us. The goal is not merely to complete tasks. It is
+          to become a dependable part of how your business operates.
+        </p>
+        <a class="text-link" href="/about">Learn how we work →</a>
+      </div>
+
+      <div class="soft-panel">
+        <h3>Designed for business owners who:</h3>
+        <ul class="list-clean">
+          <li>Already have customers and meaningful traction.</li>
+          <li>Are overwhelmed by recurring operational demands.</li>
+          <li>Need dependable execution without building a large internal team.</li>
+          <li>Value trust, communication, and long-term partnership.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container cta">
+      <span class="eyebrow">Make room for higher-value work</span>
+      <h2>Your business should not depend on you doing everything.</h2>
+      <p>
+        Let’s identify what is taking too much of your time and build a practical
+        support plan around it.
+      </p>
+      <div class="button-row">
+        <a class="button button-primary" href="/contact">Start the conversation</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero {
+    overflow: hidden;
+    padding: clamp(5rem, 10vw, 9rem) 0;
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+    gap: clamp(3rem, 7vw, 7rem);
+    align-items: center;
+  }
+
+  .hero .lead {
+    margin-top: 1.5rem;
+  }
+
+  .hero-visual {
+    position: relative;
+    min-height: 31rem;
+  }
+
+  .visual-card {
+    position: absolute;
+    inset: 1.5rem 1.5rem 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 2rem;
+    border: 1px solid #cad8cc;
+    border-radius: 2.2rem;
+    background: linear-gradient(150deg, #e6ede3, #b6c7b3);
+    box-shadow: var(--shadow);
+  }
+
+  .visual-card img {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    width: 58%;
+    opacity: 0.75;
+  }
+
+  .visual-card span {
+    color: var(--forest-800);
+    font-size: 0.9rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .visual-card strong {
+    max-width: 17rem;
+    margin-top: 0.4rem;
+    color: var(--forest-950);
+    font-family: Manrope, sans-serif;
+    font-size: 2rem;
+    line-height: 1.1;
+  }
+
+  .metric {
+    position: absolute;
+    z-index: 2;
+    padding: 1rem 1.15rem;
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.94);
+    box-shadow: 0 16px 35px rgba(16, 39, 31, 0.12);
+  }
+
+  .metric span {
+    color: var(--sage-700);
+    font-weight: 900;
+  }
+
+  .metric p {
+    font-weight: 800;
+  }
+
+  .metric-one {
+    top: 0;
+    left: 0;
+  }
+
+  .metric-two {
+    right: 0;
+    bottom: 0;
+  }
+
+  .section-heading {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    align-items: end;
+  }
+
+  .section-heading h2 {
+    max-width: 660px;
+  }
+
+  .section-heading .lead {
+    max-width: 460px;
+  }
+
+  .service-grid {
+    margin-top: 3rem;
+  }
+
+  .service-number {
+    display: inline-block;
+    margin-bottom: 2.2rem;
+    color: var(--sage-700);
+    font-weight: 900;
+  }
+
+  .partnership-copy {
+    margin-top: 1.4rem;
+  }
+
+  .text-link {
+    display: inline-block;
+    margin-top: 1.4rem;
+    color: var(--forest-900);
+    font-weight: 850;
+  }
+
+  @media (max-width: 900px) {
+    .hero-grid,
+    .section-heading {
+      grid-template-columns: 1fr;
+      display: grid;
+    }
+
+    .hero-visual {
+      min-height: 25rem;
+    }
+  }
+</style>

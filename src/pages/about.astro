@@ -1,0 +1,114 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+<BaseLayout
+  title="About | J Aguirre Management OPC"
+  description="Learn about J Aguirre Management OPC, our mission, vision, values, and partnership-led approach."
+>
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">About J Aguirre</span>
+      <h1>Built to make running a growing business feel more manageable.</h1>
+      <p class="lead">
+        J AGUIRRE MANAGEMENT OPC exists to help business owners reclaim time,
+        reduce operational pressure, and move forward with a dependable partner beside them.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container split">
+      <div class="soft-panel brand-panel">
+        <img src="/images/jaguirre-mark.png" alt="J Aguirre Management symbol" />
+      </div>
+      <div>
+        <span class="eyebrow">Our mission</span>
+        <h2>To become a trusted extension of your team.</h2>
+        <p class="lead body-copy">
+          We help business owners run their companies by taking ownership of essential
+          work that competes for their attention. Our role is to bring capacity,
+          consistency, and care to the work behind sustainable growth.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section values-section">
+    <div class="container">
+      <span class="eyebrow">What guides us</span>
+      <h2>Warm in how we work. Confident in what we deliver.</h2>
+
+      <div class="grid-3 values-grid">
+        <article class="card">
+          <h3>Care</h3>
+          <p>We treat your business, customers, and reputation with genuine attention.</p>
+        </article>
+        <article class="card">
+          <h3>Trust</h3>
+          <p>We communicate clearly, protect confidentiality, and follow through on commitments.</p>
+        </article>
+        <article class="card">
+          <h3>Ownership</h3>
+          <p>We do not wait to be chased. We take responsibility and keep important work moving.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container split">
+      <div>
+        <span class="eyebrow">Our vision</span>
+        <h2>Make it easier to do business.</h2>
+      </div>
+      <div>
+        <p class="lead">
+          We want business owners to spend less energy managing avoidable operational
+          friction and more energy serving customers, leading their teams, and building
+          what comes next.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container cta">
+      <h2>Partnership starts with understanding.</h2>
+      <p>
+        Tell us where your business is growing—and where that growth is creating pressure.
+      </p>
+      <div class="button-row">
+        <a class="button button-primary" href="/contact">Meet your next operations partner</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .brand-panel {
+    display: grid;
+    min-height: 28rem;
+    place-items: center;
+  }
+
+  .brand-panel img {
+    width: min(70%, 22rem);
+    opacity: 0.85;
+  }
+
+  .body-copy {
+    margin-top: 1.4rem;
+  }
+
+  .values-section {
+    background: var(--white);
+  }
+
+  .values-section h2 {
+    max-width: 760px;
+  }
+
+  .values-grid {
+    margin-top: 3rem;
+  }
+</style>

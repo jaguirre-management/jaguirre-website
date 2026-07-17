@@ -1,0 +1,172 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const services = [
+  {
+    title: "Customer Support",
+    summary: "Protect customer trust with responsive, thoughtful service.",
+    items: [
+      "Email and ticket support",
+      "Live chat support",
+      "Customer follow-ups",
+      "Escalation coordination",
+      "Knowledge base assistance",
+    ],
+  },
+  {
+    title: "Content Creation",
+    summary: "Keep your brand active with content built around a clear plan.",
+    items: [
+      "Social media content",
+      "Content calendars",
+      "Copy and caption support",
+      "Basic creative coordination",
+      "Publishing assistance",
+    ],
+  },
+  {
+    title: "Marketing Support",
+    summary: "Support consistent execution across your growth activities.",
+    items: [
+      "Campaign coordination",
+      "Email marketing assistance",
+      "Audience engagement",
+      "Performance tracking",
+      "Administrative marketing support",
+    ],
+  },
+  {
+    title: "Content Moderation",
+    summary: "Maintain safer, healthier communities through clear moderation workflows.",
+    items: [
+      "Comment and community moderation",
+      "Policy-based content review",
+      "Escalation handling",
+      "Incident documentation",
+      "Moderation reporting",
+    ],
+  },
+];
+---
+<BaseLayout
+  title="Services | J Aguirre Management OPC"
+  description="Explore customer support, content creation, marketing support, and content moderation services from J Aguirre Management OPC."
+>
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Services</span>
+      <h1>Extra capacity without losing control of your business.</h1>
+      <p class="lead">
+        Our services are designed for growing businesses that need dependable
+        execution, better consistency, and more time for leadership.
+      </p>
+    </div>
+  </section>
+
+  <section class="section service-section">
+    <div class="container service-list">
+      {services.map((service, index) => (
+        <article class="service-row">
+          <div class="service-index">0{index + 1}</div>
+          <div>
+            <h2>{service.title}</h2>
+            <p class="lead">{service.summary}</p>
+          </div>
+          <ul class="list-clean">
+            {service.items.map((item) => <li>{item}</li>)}
+          </ul>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container split">
+      <div>
+        <span class="eyebrow">How engagement starts</span>
+        <h2>We begin with the pressure points, not a generic package.</h2>
+      </div>
+      <div class="soft-panel">
+        <ol class="process">
+          <li><strong>Discover:</strong> Understand your business, workload, and priorities.</li>
+          <li><strong>Design:</strong> Define responsibilities, workflows, and success measures.</li>
+          <li><strong>Deliver:</strong> Start with clear ownership and consistent communication.</li>
+          <li><strong>Improve:</strong> Review performance and strengthen the system over time.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container cta">
+      <h2>Not sure which service you need?</h2>
+      <p>
+        Tell us what is consuming your time. We’ll help identify the right place to begin.
+      </p>
+      <div class="button-row">
+        <a class="button button-primary" href="/contact">Discuss your needs</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .service-section {
+    padding-top: 1rem;
+  }
+
+  .service-list {
+    display: grid;
+  }
+
+  .service-row {
+    display: grid;
+    grid-template-columns: 5rem 1.2fr 1fr;
+    gap: 2rem;
+    padding: 3rem 0;
+    border-top: 1px solid var(--border);
+  }
+
+  .service-row:last-child {
+    border-bottom: 1px solid var(--border);
+  }
+
+  .service-index {
+    color: var(--sage-700);
+    font-weight: 900;
+  }
+
+  .service-row .lead {
+    margin-top: 0.8rem;
+  }
+
+  .service-row h2 {
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  }
+
+  .service-row .list-clean {
+    margin-top: 0;
+  }
+
+  .process {
+    display: grid;
+    gap: 1rem;
+    margin: 0;
+    padding-left: 1.2rem;
+    color: var(--muted);
+  }
+
+  .process strong {
+    color: var(--forest-950);
+  }
+
+  @media (max-width: 800px) {
+    .service-row {
+      grid-template-columns: 3rem 1fr;
+    }
+
+    .service-row ul {
+      grid-column: 2;
+    }
+  }
+</style>
