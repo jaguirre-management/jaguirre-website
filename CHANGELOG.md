@@ -4,6 +4,13 @@ All notable changes to this project will be documented here.
 
 ---
 
+## [1.0.1] - 2026-08-30
+
+### Configuration
+- Verified GitHub organization migration and Cloudflare deployment integration.
+
+---
+
 ## [1.0.0] - 2026-07-17
 
 ### Added
